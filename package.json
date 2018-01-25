@@ -1,0 +1,10 @@
+{
+  "name": "vue-cli-template-parcel",
+  "version": "1.0.0",
+  "description": "A full-featured parcel setup with hot-reload, unit testing & css extraction.",
+  "main": "meta.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
+}
