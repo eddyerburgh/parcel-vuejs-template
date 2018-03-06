@@ -21,6 +21,7 @@ pids
 *.pid.lock
 
 node_modules
+/dist/
 
 # Parcel cache
 .cache
