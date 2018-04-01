@@ -50,7 +50,7 @@
     "jest-serializer-vue": "^0.3.0",
     "vue-jest": "^1.0.2",
     {{/unit}}
-    "parcel-bundler": "parcel-bundler/parcel#vue",
+    "parcel-bundler": "^1.7.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
