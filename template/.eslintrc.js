@@ -31,16 +31,6 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  {{#if_eq lintConfig "airbnb"}}
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
-  },
-  {{/if_eq}}
   // add your custom rules here
   rules: {
     {{#if_eq lintConfig "standard"}}
@@ -48,11 +38,6 @@ module.exports = {
     'generator-star-spacing': 'off',
     {{/if_eq}}
     {{#if_eq lintConfig "airbnb"}}
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never'
-    }],
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     'no-param-reassign': ['error', {
@@ -67,6 +52,12 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    // Temporary fix for failed resolving in eslint-plugin-import
+    // We need to use parcel or jest resolver.
+    // Tried with existing jest resolver but no luck.
+    // https://www.npmjs.com/package/eslint-import-resolver-jest
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
     {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
