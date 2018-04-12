@@ -51,9 +51,6 @@
     "vue-jest": "^2.4.1",
     "vue-template-compiler": "^2.5.16",
     {{/unit}}
-    "parcel-bundler": "^1.7.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
+    "parcel-bundler": "^1.7.0"
   }
 }
